@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tim so lon thu 2 trong mang</h1>
+    <script>
+      function findNumber(arr) {
+        for (i = 0; i < arr.length - 1; i++) {
+          for (j = 0; j < i + i; j++)
+            if (arr[j] > arr[j + 1]) {
+              let e = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = e;
+            }
+        }
+        return arr[arr.length - 2];
+      }
+      const arr = [1, 2, 3, 5, 4, 9, 6];
+      console.log(findNumber(arr));
+    </script>
+  </body>
+</html>
